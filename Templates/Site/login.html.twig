@@ -1,0 +1,38 @@
+{% extends "base.html.twig" %}
+{% block conteudo %}
+
+
+    <div class="login-container">
+        <div class="login-header">
+            <span>
+                <i class="bi bi-box"></i>
+            </span>
+            <span>
+                Avanti Inventory <br> Management
+            </span>
+        </div>
+        <p>Acesse sua conta para gerenciar o estoque</p>
+        <form class="login-form" method="post" action="{{ url('/autenticar') }}">
+            <div>
+                <label for="email">
+                    E-mail
+                </label>
+                <input type="text" name="email" id="email" required/>
+            </div>
+            <div>
+                <label for="senha">
+                    Senha
+                </label> 
+                <input  type="password" name="senha" id="senha"/>
+            </div>
+            <button>
+                <i class="bi bi-box-arrow-in-right"></i>
+                Entrar
+            </button>
+        </form>
+        {{ flash() }}
+        <a href="#">Esqueceu sua senha? Contate o administrador</a>
+    </div>
+
+
+{% endblock %}

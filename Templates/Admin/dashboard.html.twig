@@ -1,0 +1,47 @@
+{% extends "base.html.twig" %}
+{% block conteudo %}
+
+
+    {{ flash() }}
+
+    <div class="dashboard-head">
+        <h1>Produtos</h1>
+        <form method="post" class="search-box" action="{{ url('/admin/dashboard') }}">
+            <i class="bi bi-search"></i>
+            <input type="text" name="filtro" placeholder="Buscar por nome...">
+        </form>
+        <a href="{{ url('/admin/novo') }}" class="btn-add">
+            <i style="margin-right: 10px" class="bi bi-plus-lg"></i> Adicionar Produto
+        </a>
+    </div>
+
+    <div class="dashboard-table">
+        <table>
+        <thead>
+            <tr>
+                <th style="width: 40%;">Nome</th>
+                <th style="width: 15%;">Quantidade</th>
+                <th style="width: 20%;">Preço</th>
+                <th style="width: 25%;">Ações</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for produto in produtos %}
+                <tr>
+                    <td>{{ produto.nome }}</td>
+                    <td>{{ produto.quantidade }}</td>
+                    <td>R$ {{ (produto.preco/100)|number_format(2, ',', '.') }}</td>
+                    <td class="acoes">
+                        <a href="{{ url('/admin/editar/' ~ produto.id) }}" class="btn-edit"><i class="bi bi-pencil"></i> Editar</a>
+                        <a href="{{ url('/admin/confirmar_deletar/' ~ produto.id) }}" class="btn-delete" onclick="return confirm('Excluir?')"><i class="bi bi-trash"></i> Excluir</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr><td colspan="4">Nenhum produto encontrado.</td></tr>
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+
+
+{% endblock %}

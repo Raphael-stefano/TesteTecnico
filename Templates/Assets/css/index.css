@@ -1,0 +1,545 @@
+:root {
+    --cor-cinza: #a6b2c4;
+    --cor-header: #f1f5f9;
+    --cor-abobora: #f59e0b;
+    --cor-abobora-hover: #cf8c17;
+    --cor-azul-esverdeado: #0ea5a4;
+    --cor-azul-esverdeado-hover: #137272;
+    --cor-main: #f7f8f9;
+    --cor-vermelha: #ef4444;
+    --cor-vermelha-hover: #dc2626;
+    --cor-fundo-formulario: #7b7c7c;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.site-main{
+    background: var(--cor-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashboard-main {
+    flex: 1;
+    padding: 30px;
+}
+
+/* mensagem flash */
+
+.mensagem{
+    margin: 10px 0;
+    height: 40px;
+    width: 100%;
+    color: black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.mensagem-alerta{
+    background-color: var(--cor-abobora);
+}
+
+.mensagem-sucesso{
+    background-color: var(--cor-azul-esverdeado-hover);
+    color: white;
+}
+
+.mensagem-erro{
+    background-color: var(--cor-azul-esverdeado-hover);
+}
+
+/* ***** Estilo da página de login ***** */
+
+.login-container{
+    height: 75%;
+    width: 30%;
+    background: white;
+    border-radius: 7.5%;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25), -1px -1px 2px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 25px;
+    box-sizing: border-box;
+}
+
+.login-container .login-header{
+    display: flex;
+    width: 100%;
+    font-size: 1.3em;
+}
+
+.login-container p{
+    width: 100%;
+    color: var(--cor-cinza);
+}
+
+.login-container .bi-box{
+    font-size: 2em;
+    margin-right: 15px;
+}
+
+.login-container .login-form{
+    width: 100%;
+}
+
+.login-container .login-form div{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px 0;
+    color: var(--cor-cinza);
+}
+
+.login-container .login-form input{
+    margin-top: 10px;
+    height: 40px;
+    border: 1px solid var(--cor-cinza);
+    border-radius: 10px;
+    outline: none;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.login-container .login-form button{
+    margin: 10px 0;
+    height: 40px;
+    width: 100%;
+    background-color: var(--cor-azul-esverdeado);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 1.1em;
+}
+
+.login-container a{
+    color: var(--cor-cinza);
+    text-decoration: none;
+}
+
+.login-container a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/* ***** Estilo da página de login ***** */
+
+header{
+    background-color: var(--cor-header);
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+header .header-left{
+    font-size: 1.3em;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+header .header-left i{
+    font-size: 1.5em;
+}
+
+header .header-right{
+    display: flex;
+    align-items: center;
+    font-size: 1.2em;
+}
+
+header .header-right i{
+    font-size: 1.4em;
+    margin-right: 10px;
+}
+
+header .header-right a{
+    text-decoration: none;
+    color: black;
+}
+
+header .header-right a:hover{
+    text-decoration: underline;
+}
+
+header .header-right div{
+    display: flex;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+header .header-right div:first-of-type{
+    font-size: 0.75em;
+    color: var(--cor-cinza)
+}
+
+/* topo da sessao - logo acima da tabela */
+
+.dashboard-head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.dashboard-head .search-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.dashboard-head .search-box i {
+    position: absolute;
+    left: 10px;
+    color: #9ca3af;
+    font-size: 1.1em;
+}
+
+.dashboard-head .search-box input {
+    padding: 8px 12px 8px 35px; /* espaço pro ícone */
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    outline: none;
+    font-size: 0.9em;
+    width: 220px;
+}
+
+.dashboard-head a{
+    text-decoration: none;
+    color: white;
+    background-color: var(--cor-azul-esverdeado);
+    padding: 15px;
+    border-radius: 9px;
+    transition: all 1s;
+}
+
+.dashboard-head a:hover{
+    background-color: var(--cor-azul-esverdeado-hover);
+}
+
+/* tabela */
+
+.dashboard-table{
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.dashboard-table table{
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.dashboard-table th, .dashboard-table td{
+    padding: 14px 18px;
+    text-align: left;
+    font-size: 0.95em;
+}
+
+.dashboard-table tr:nth-of-type(even){
+    background-color: var(--cor-header);
+}
+
+.dashboard-table th{
+    background-color: var(--cor-header);
+}
+
+.dashboard-table tr:hover td{
+    background-color: var(--cor-cinza);
+}
+
+.dashboard-table td.acoes{
+    display: flex;
+    gap: 10px;
+}
+
+.dashboard-table th:last-of-type{
+    text-align: right;
+}
+
+.dashboard-table td:last-of-type{
+    display: flex;
+    justify-content: end;
+}
+
+.dashboard-table a{
+    text-decoration: none;
+}
+
+.dashboard-table .btn-edit, .btn-delete{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.dashboard-table .btn-edit{
+    background: var(--cor-abobora);
+    color: black;
+}
+
+.dashboard-table .btn-edit:hover{
+    background: var(--cor-abobora-hover)
+}
+
+.dashboard-table .btn-delete{
+    background: var(--cor-vermelha);
+    color: white;
+}
+
+.dashboard-table .btn-delete:hover{
+    background: var(--cor-vermelha-hover);
+}
+
+
+
+
+/*** Tabela de cadastro e de Exclusao***/
+
+/* partes gerais */
+
+.cadastro-body, .confirmar-deletar-body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--cor-fundo-formulario);
+}
+
+.form-produto, .confirmar-deletar-body .confirmacao{
+    background-color: white;
+    border-radius: 25px;
+}
+
+.form-produto{
+    height: 90%;
+    width: 60%;
+}
+
+.confirmar-deletar-body .confirmacao{
+    height: 65%;
+    width: 40%;
+}
+
+/* headers */
+
+.form-produto .form-produto-header, .confirmacao .confirmacao-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    font-size: 1.2em;
+    border-bottom: 1.5px solid var(--cor-cinza);
+    height: 15%;
+}
+
+.form-produto .form-produto-header i, .confirmacao .confirmacao-header i{
+    font-size: 1.4em;
+}
+
+.form-produto .form-produto-header span:last-of-type i, .confirmacao .confirmacao-header span:last-of-type i{
+    padding: 3px 8px;
+    border-radius: 5px;
+}
+
+.form-produto .form-produto-header span:last-of-type i{
+    background-color: var(--cor-cinza);
+}
+
+.confirmacao .confirmacao-header span:last-of-type i{
+    border: 0.5px solid var(--cor-cinza);
+}
+
+.form-produto .form-produto-header span:first-of-type i, .confirmacao .confirmacao-header span:first-of-type i{
+    margin-right: 10px;
+}
+
+.form-produto .form-produto-header span:first-of-type, .confirmacao .confirmacao-header span:first-of-type{
+    display: flex;
+    align-items: center;
+}
+
+/* bodies (estes estao separados) */
+
+/* body formulario */
+
+.form-produto .form-produto-body, .confirmacao .confirmacao-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 30px;
+    padding-top: 0;
+    box-sizing: border-box;
+}
+
+.form-produto .form-produto-body{
+    height: 73%;
+}
+
+.confirmacao .confirmacao-body{
+    height: 67%;
+}
+
+.form-produto .form-produto-body div{
+    padding: 12.5px 20px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.form-produto .form-produto-body div label{
+    display: block;
+    color: var(--cor-cinza);
+    margin-bottom: 5px;
+}
+
+.form-produto .form-produto-body div:nth-of-type(2),
+.form-produto .form-produto-body div:nth-of-type(3),
+.form-produto .form-produto-body div:nth-of-type(4),
+.form-produto .form-produto-body div:nth-of-type(5) {
+    width: 50%;
+}
+
+.form-produto .form-produto-body div input, .form-produto .form-produto-body div select, .form-produto .form-produto-body div textarea{
+    width: 100%;
+    color: var(--cor-cinza);
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid var(--cor-cinza);
+}
+
+.form-produto .form-produto-body div input:hover, .form-produto .form-produto-body div select:hover, .form-produto .form-produto-body div textarea:hover{
+    outline: 2px solid var(--cor-cinza);
+}
+
+/* body da confirmaçao de exclusao */
+
+.confirmacao-body{
+    display: flex;
+    flex: row wrap;
+    align-items: center;
+}
+
+.confirmacao-body .pergunta{
+    width: 100%;
+    background-color: var(--cor-cinza);
+    padding: 10px 25px;
+    border-radius: 15px;
+}
+
+.confirmacao-body .atributo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.confirmacao-body span:first-of-type{
+    color: var(--cor-cinza);
+}
+
+.confirmacao-body .alerta i{
+    margin-right: 5px;
+}
+
+.confirmacao-body .alerta{
+    width: 100%;
+    background-color: var(--cor-vermelha);
+    color: white;
+    padding: 7px 14px;
+    border-radius: 15px;
+}
+
+/* footers */
+
+.form-produto .form-produto-footer, .confirmacao .confirmacao-footer{
+    border-top: 1.5px solid var(--cor-cinza);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    
+    padding: 0 25px;
+}
+
+.form-produto .form-produto-footer{
+    height: 12%;
+}
+
+.confirmacao .confirmacao-footer{
+    height: 18%;
+}
+
+.form-produto .form-produto-footer a, .confirmacao .confirmacao-footer a{
+    background-color: var(--cor-cinza);
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.confirmacao .confirmacao-footer a:last-of-type{
+    background-color: var(--cor-vermelha);
+}
+
+.form-produto .form-produto-footer button{
+    background-color: var(--cor-azul-esverdeado);
+    padding: 9px 13px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.form-produto .form-produto-footer button i, .confirmacao .confirmacao-footer a:last-of-type i{
+    margin-right: 5px;
+}
+
+.form-produto .form-produto-footer .limpar{
+    background-color: transparent;
+    padding: 6px 8px;
+    border-radius: 5px;
+    border: none;
+    color: var(--cor-cinza);
+    border: 1px solid var(--cor-cinza)
+}
+
+
+
+
+

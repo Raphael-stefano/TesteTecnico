@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Básica</title>
+
+    <!-- bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Assets -->
+    <link rel="stylesheet" href="{{ url('Templates/Assets/css/index.css') }}">
+
+
+</head>
+<body class="cadastro-body">
+
+    <form class="form-produto" method="post" action="{{ url(action) }}">
+        <div class="form-produto-header">
+            <span><i class="{{ header_icone }}"></i>{{ header_verbo }} produto</span>
+            <span><a href="{{ url('/admin/dashboard') }}"><i class="bi bi-x"></i></a></span>
+        </div>
+
+        <div class="form-produto-body">
+            <div>
+                <label for="nome">Nome do Produto</label>
+                <input type="text" id="nome" name="nome" {{ nome ? 'value' : 'placeholder' }}="{{ nome|default('Nome do produto') }}" required/>
+            </div>
+            <div>
+                <label for="sku">SKU</label>
+                <input type="text" id="sku" name="sku" {{ sku ? 'value' : 'placeholder' }}="{{ sku|default('SKU') }}"/>
+            </div>
+            <div>
+                <label for="categoria-select">Categoria</label>
+                <select required id="categoria-select" name="id_categoria" required >
+                    <option disabled selected value="">Selecione uma opção</option>
+                    {% for categoria in categorias %}
+                        <option {{ id_categoria == categoria.id ? "selected" : "" }} value="{{ categoria.id }}">{{categoria.nome}}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div>
+                <label for="preco">Preço (em centavos)</label>
+                <input type="number" id="preco" name="preco" {{ preco ? 'value' : 'placeholder' }}="{{ preco|default('Preço') }}" required />
+            </div>
+            <div>
+                <label for="quantidade">Quantidade em Estoque</label>
+                <input type="number" id="quantidade" name="quantidade" {{ quantidade ? 'value' : 'placeholder' }}="{{ quantidade|default('Quantidade em Estoque') }}" required />
+            </div>
+            <div>
+                <label for="descricao">Descriçao</label>
+                <textarea rows="4" id="descricao" name="descricao">{{ descricao|default('Descriçao do produto') }}</textarea>
+            </div>
+        </div>
+        <div class="form-produto-footer">
+            <div>
+                {% if limpar %}
+                    <a class="limpar" href="{{ url('/admin/novo') }}"><i class="bi bi-trash"></i> Limpar</a>
+                {% endif %}
+            </div>
+            <div>
+                <a href="{{ url('/admin/dashboard') }}">Cancelar</a>
+                <button type="submit"><i class="{{ submeter_icone }}"></i> {{ submeter_verbo }} Produto</button>
+            </div>
+        </div>
+    </form>
+
+    <script src="{{ url('Templates/Assets/js/script.js') }}"></script>
+    
+</body>
+</html>

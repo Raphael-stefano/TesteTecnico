@@ -1,0 +1,22 @@
+{
+    "name": "rapha/teste-tecnico",
+    "description": ".",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Rapha\\TesteTecnico\\": "src/",
+            "Core\\": "Core/",
+            "Sistema\\": "Sistema/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raphael-stefano",
+            "email": "raphaelestefano@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.21",
+        "pecee/simple-router": "^5.4"
+    }
+}
