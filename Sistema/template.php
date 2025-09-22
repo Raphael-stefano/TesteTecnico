@@ -10,6 +10,11 @@
     class Template{
         private Environment $twig;
 
+        /**
+         * 
+         *
+         * @param string $diretorio caminho do diretório onde estao as templates
+         */
         public function __construct(string $diretorio){
             $loader = new FilesystemLoader($diretorio);
             $this->twig = new Environment($loader);
@@ -18,10 +23,22 @@
             $this->twig->setLexer($lexer);
         }
 
+        /**
+         * renderiza uma template
+         *
+         * @param string $view
+         * @param array $dados
+         * @return string
+         */
         public function renderizar(string $view, array $dados): string{
             return $this->twig->render($view, $dados);
         }
 
+        /**
+         * Funçoes do helper acessiveis no front-end
+         *
+         * @return void
+         */
         private function helpers(): void{
             array(
                 $this->twig->addFunction(

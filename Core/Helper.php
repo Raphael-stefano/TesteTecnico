@@ -20,10 +20,23 @@
             return false;
         }
 
+        /**
+         * salva a senha criptografada
+         *
+         * @param string $senha
+         * @return string
+         */
         public static function gerarSenha(string $senha): string{
             return password_hash($senha, PASSWORD_DEFAULT);
         }
 
+        /**
+         * compara uma senha com a senha descriptografada no banco de dados
+         *
+         * @param string $senha
+         * @param string $hash
+         * @return boolean
+         */
         public static function verificarSenha(string $senha, string $hash): bool{
             return password_verify($senha, $hash);
         }
@@ -41,6 +54,12 @@
             return null;
         }
 
+        /**
+         * redireciona para uma url dentro do site
+         *
+         * @param string|null $url
+         * @return void
+         */
         public static function redirecionar(string $url = null): void{
             header("HTTP/1.1 302 Found");
             $local = $url ? self::url($url) : self::url();

@@ -7,9 +7,17 @@
     use PDO;
     use PDOException;
 
+    /**
+     * Singleton da conexao com o banco de dados
+     */
     class Conexao{
         private static PDO $instance;
 
+        /**
+         * configuraçao do banco de dados
+         *
+         * @return PDO
+         */
         public static function getInstance(): PDO{
             if(empty(self::$instance)){
                 try{

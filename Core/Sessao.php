@@ -91,6 +91,11 @@
             }
         }
 
+        /**
+         * gerar mensagem flash
+         *
+         * @return Mensagem|null
+         */
         public function flash(): ?Mensagem{
             if($this->checar('flash')){
                 $flash = $this->flash;

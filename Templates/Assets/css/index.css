@@ -9,6 +9,7 @@
     --cor-vermelha: #ef4444;
     --cor-vermelha-hover: #dc2626;
     --cor-fundo-formulario: #7b7c7c;
+    --altura-header: 80px;
 }
 
 *{
@@ -35,6 +36,7 @@ body{
 .dashboard-main {
     flex: 1;
     padding: 30px;
+    box-sizing: border-box;
 }
 
 /* mensagem flash */
@@ -141,10 +143,55 @@ body{
     text-decoration: underline;
 }
 
+/* tablet */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .login-container {
+        width: 70%;
+        height: auto;
+        padding: 20px;
+        border-radius: 20px;
+        gap: 30px;
+    }
+
+    .login-container .login-header {
+        font-size: 1.5em;
+    }
+
+    .login-container .login-form input,
+    .login-container .login-form button {
+        height: 50px;
+        font-size: 1.1em;
+    }
+}
+
+/* mobile */
+@media (max-width: 767px) {
+    .login-container {
+        width: 90%;
+        height: auto;
+        padding: 15px;
+        border-radius: 15px;
+        gap: 20px;
+    }
+
+    .login-container .login-header {
+        font-size: 1.2em;
+    }
+
+    .login-container .login-form input,
+    .login-container .login-form button {
+        height: 45px;
+        font-size: 1em;
+    }
+
+    .login-container p,
+    .login-container a {
+        font-size: 0.9em;
+    }
+}
 
 
-
-/* ***** Estilo da página de login ***** */
+/* ***** Estilo do componente Header ***** */
 
 header{
     background-color: var(--cor-header);
@@ -152,7 +199,13 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    min-height: var(--altura-header);
+    height: auto;
     padding: 15px;
+    box-sizing: border-box;
+    width: 100%;
+    position: fixed;
+    z-index: 1000;
 }
 
 header .header-left{
@@ -200,6 +253,7 @@ header .header-right div:first-of-type{
 /* topo da sessao - logo acima da tabela */
 
 .dashboard-head{
+    margin-top: var(--altura-header);
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -214,20 +268,29 @@ header .header-right div:first-of-type{
     align-items: center;
 }
 
-.dashboard-head .search-box i {
+.dashboard-head .search-box button {
     position: absolute;
-    left: 10px;
+    left: 5px;
     color: #9ca3af;
     font-size: 1.1em;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    padding: 0 5px;
 }
 
 .dashboard-head .search-box input {
-    padding: 8px 12px 8px 35px; /* espaço pro ícone */
+    padding: 8px 12px 8px 35px;
     border: 1px solid #d1d5db;
     border-radius: 8px;
     outline: none;
     font-size: 0.9em;
     width: 220px;
+}
+
+.dashboard-head .search-box input:hover {
+    outline: 2px solid var(--cor-cinza);
 }
 
 .dashboard-head a{
@@ -324,6 +387,114 @@ header .header-right div:first-of-type{
 
 .dashboard-table .btn-delete:hover{
     background: var(--cor-vermelha-hover);
+}
+
+
+
+
+
+#mobile-menu-button{
+    display: none;
+}
+/* Tablet */
+@media (max-width: 1025px) and (min-width: 768px) {
+    header {
+        flex-direction: row;
+        padding: 10px;
+    }
+
+    header .header-left {
+        font-size: 1.1em;
+    }
+
+    header .header-right {
+        font-size: 1em;
+        gap: 10px;
+    }
+
+    .dashboard-head {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .dashboard-head .search-box input {
+        width: 180px;
+        font-size: 0.85em;
+    }
+
+    .dashboard-table th, 
+    .dashboard-table td {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    #mobile-menu-button{
+        display: block;
+        margin-right: 20px;
+    }
+
+    .mobile-hidden{
+        display: none !important;
+    }
+
+    .mobile-shown{
+        display: block !important;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    header .header-left {
+        font-size: 1.1em;
+    }
+
+    header .header-right {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 0.9em;
+        gap: 6px;
+    }
+
+    .dashboard-head {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .dashboard-head .search-box {
+        width: 100%;
+    }
+
+    .dashboard-head .search-box input {
+        width: 100%;
+        font-size: 0.85em;
+    }
+
+    .dashboard-head a {
+        text-align: center;
+        padding: 12px;
+    }
+
+    .dashboard-table {
+        overflow-x: auto;
+    }
+
+    .dashboard-table table {
+        min-width: 600px;
+        font-size: 0.85em;
+    }
+
+    .dashboard-table th, 
+    .dashboard-table td {
+        padding: 8px;
+    }
 }
 
 
@@ -542,4 +713,213 @@ header .header-right div:first-of-type{
 
 
 
+/* Tablet */
+@media (max-width: 1025px) and (min-width: 768px) {
+    /* Cadastro */
+    .form-produto {
+        width: 80%;
+        height: auto;
+        min-height: 600px;
+        padding: 20px;
+        border-radius: 20px;
+    }
 
+    .form-produto .form-produto-header {
+        font-size: 1.1em;
+        padding: 20px 15px;
+        height: auto;
+    }
+
+    .form-produto .form-produto-body {
+        padding: 20px;
+    }
+
+    .form-produto .form-produto-body div {
+        padding: 10px 15px;
+    }
+
+    .form-produto .form-produto-body div:nth-of-type(2),
+    .form-produto .form-produto-body div:nth-of-type(3),
+    .form-produto .form-produto-body div:nth-of-type(4),
+    .form-produto .form-produto-body div:nth-of-type(5) {
+        width: 100%;
+    }
+
+    .form-produto .form-produto-body div input,
+    .form-produto .form-produto-body div select,
+    .form-produto .form-produto-body div textarea {
+        font-size: 0.9em;
+        padding: 8px;
+    }
+
+    .form-produto .form-produto-footer {
+        padding: 15px;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .form-produto .form-produto-footer a,
+    .form-produto .form-produto-footer button {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    /* Exclusão */
+    .confirmar-deletar-body .confirmacao {
+        width: 70%;
+        height: auto;
+        min-height: 400px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .confirmacao .confirmacao-header {
+        font-size: 1.1em;
+        padding: 20px 15px;
+        height: auto;
+    }
+
+    .confirmacao .confirmacao-body {
+        padding: 20px;
+    }
+
+    .confirmacao-body .pergunta {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    .confirmacao-body .atributo {
+        width: 100%;
+        padding: 10px 15px;
+    }
+
+    .confirmacao-body .alerta {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    .confirmacao .confirmacao-footer {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .confirmacao .confirmacao-footer a {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    /* Cadastro */
+    .form-produto {
+        width: 90%;
+        height: 60%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .form-produto .form-produto-header {
+        font-size: 1em;
+        padding: 15px 10px;
+        height: auto;
+    }
+
+    .form-produto .form-produto-header i {
+        font-size: 1.2em;
+    }
+
+    .form-produto .form-produto-body {
+        padding: 15px;
+        overflow-y: auto;
+    }
+
+    .form-produto .form-produto-body div {
+        padding: 8px 10px;
+    }
+
+    .form-produto .form-produto-body div:nth-of-type(2),
+    .form-produto .form-produto-body div:nth-of-type(3),
+    .form-produto .form-produto-body div:nth-of-type(4),
+    .form-produto .form-produto-body div:nth-of-type(5) {
+        width: 100%;
+    }
+
+    .form-produto .form-produto-body div input,
+    .form-produto .form-produto-body div select,
+    .form-produto .form-produto-body div textarea {
+        font-size: 0.85em;
+        padding: 6px;
+    }
+
+    .form-produto .form-produto-footer {
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .form-produto .form-produto-footer div{
+        width: 100%;
+        display: flex;
+        gap: 10px;
+    }
+
+    .form-produto .form-produto-footer a,
+    .form-produto .form-produto-footer button {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.85em;
+        text-align: center;
+    }
+
+    /* Exclusão */
+    .confirmar-deletar-body .confirmacao {
+        width: 95%;
+        height: auto;
+        padding: 15px;
+        border-radius: 15px;
+    }
+
+    .confirmacao .confirmacao-header {
+        font-size: 1em;
+        padding: 15px 10px;
+        height: auto;
+    }
+
+    .confirmacao .confirmacao-header i {
+        font-size: 1.2em;
+    }
+
+    .confirmacao .confirmacao-body {
+        padding: 15px;
+    }
+
+    .confirmacao-body .pergunta {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+
+    .confirmacao-body .atributo {
+        width: 100%;
+        padding: 8px 10px;
+        font-size: 0.85em;
+    }
+
+    .confirmacao-body .alerta {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+
+    .confirmacao .confirmacao-footer {
+        padding: 10px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .confirmacao .confirmacao-footer a {
+        width: 100%;
+        padding: 8px;
+        font-size: 0.85em;
+        text-align: center;
+    }
+}
