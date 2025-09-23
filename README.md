@@ -27,3 +27,9 @@ Ambos as açoes de cadastrar e de editar terminam renderizando uma mensagem de S
 # Confirmaçao de exclusao
 
 Ao clicar em excluir um produto, o usuário é redirecionado a uma página de confirmaçao da exclusao do produto. Nesta página, sao exibidas algumas informaçoes do produto e apresentados avisos sobre a irreversibilidade da açao.
+
+# Banco de Dados
+
+![Diagrama do Banco de Dados](https://raw.githubusercontent.com/Raphael-stefano/teste_tecnico/main/Banco%20de%20Dados/diagrama.png)
+
+No banco de dados do projeto, foram criadas tabelas para usuário, produto e categoria. Categoria foi desenvolvida apenas para ser usada no formulário do produto. Usuário foi desenvolvido para a validaçao na tela de login. Produto foi mais desenvolvido, pois foi o que mais foi pedido nos requisitos do projeto.
