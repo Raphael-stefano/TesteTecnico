@@ -32,4 +32,8 @@ Ao clicar em excluir um produto, o usuário é redirecionado a uma página de co
 
 ![Diagrama do Banco de Dados](https://raw.githubusercontent.com/Raphael-stefano/teste_tecnico/main/Banco%20de%20Dados/diagrama.png)
 
+O banco de dados foi desenvolvido utilizando o MySQL.
+
 No banco de dados do projeto, foram criadas tabelas para usuário, produto e categoria. Categoria foi desenvolvida apenas para ser usada no formulário do produto. Usuário foi desenvolvido para a validaçao na tela de login. Produto foi mais desenvolvido, pois foi o que mais foi pedido nos requisitos do projeto.
+
+O atributo usado para a validaçao foi o E-mail do usuário. As senhas estao devidamente criptografadas. O preço do produto foi definido como INT ao invés de float pois float pode ser impreciso. Para maior precisao, foi usado INT para representar centavos, sendo feita a formataçao e divisao por 100 para representar visualmente os preços.
