@@ -69,7 +69,6 @@ Os testes cobrem:
 - Validação de helpers utilitários
 - Funcionamento dos objetos Sessão e Mensagem
 
-```markdown
 Para executar os testes:
 ```bash
 php vendor/bin/phpunit
