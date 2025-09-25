@@ -5,7 +5,7 @@
 - [Tabela Dashboard](#tabela-dashboard)
 - [Formulário de Cadastro de Produto](#formulário-de-cadastro-de-produto)
 - [Formulário de Edição de Produto](#formulário-de-ediçao-de-produto)
-- [Confirmação de Exclusão de Produto](#confirmação-de-exclusão)
+- [Confirmação de Exclusão de Produto](#confirmaçao-de-exclusao)
 - [Banco de Dados](#banco-de-dados)
 - [Testes Unitários](#testes-unitários)
 - [Tecnologias e Versões (para compatibilidade)](#tecnologias-e-versões)
