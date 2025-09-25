@@ -9,6 +9,7 @@
 - [Banco de Dados](#banco-de-dados)
 - [Testes Unitários](#testes-unitários)
 - [Tecnologias e Versões (para compatibilidade)](#tecnologias-e-versoes-para-compatibilidade)
+- [Configuração Inicial](#configuração-inicial)
 
 # TesteTecnico
 
