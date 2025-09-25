@@ -1,6 +1,6 @@
 # teste_tecnico
 
-Esta aplicaçao foi desenvolvida utilizando PhP com pecee/simplerouter e twig template.
+Esta aplicaçao foi desenvolvida utilizando PhP (8.2.0, composer 2.8.2) com pecee/simplerouter e twig template.
 
 # Tela de login
 
@@ -47,3 +47,14 @@ O banco de dados foi desenvolvido utilizando o MySQL.
 No banco de dados do projeto, foram criadas tabelas para usuário, produto e categoria. Categoria foi desenvolvida apenas para ser usada no formulário do produto. Usuário foi desenvolvido para a validaçao na tela de login. Produto foi mais desenvolvido, pois foi o que mais foi pedido nos requisitos do projeto.
 
 O atributo usado para a validaçao foi o E-mail do usuário. As senhas estao devidamente criptografadas. O preço do produto foi definido como INT ao invés de float pois float pode ser impreciso. Para maior precisao, foi usado INT para representar centavos, sendo feita a formataçao e divisao por 100 para representar visualmente os preços.
+
+# Testes unitários
+
+Este projeto utiliza PHPUnit para testes unitários. 
+Os testes incluem:
+- CRUD de produtos
+- Leitura de dados de Categorias e Usuários
+- Helpers
+- Objeto Sessao e Objeto Mensagem
+
+Para executar os testes unitários, digitar no terminal: php vendor/bin/phpunit
