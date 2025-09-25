@@ -8,7 +8,7 @@
 - [Confirmação de Exclusão de Produto](#confirmaçao-de-exclusao)
 - [Banco de Dados](#banco-de-dados)
 - [Testes Unitários](#testes-unitários)
-- [Tecnologias e Versões (para compatibilidade)](#tecnologias-e-versões)
+- [Tecnologias e Versões (para compatibilidade)](#tecnologias-e-versoes)
 
 # TesteTecnico
 
