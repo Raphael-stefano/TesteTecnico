@@ -42,7 +42,7 @@
             </div>
             <div class="atributo">
                 <span>Preço</span>
-                <span>{{ (preco/100)|number_format(2, ',', '.') }}</span>
+                <span>{{ formatarMonetario(preco/100) }}</span>
             </div>
             <div class="alerta">
                 <i class="bi bi-exclamation-triangle"></i> Açao permanente

@@ -55,6 +55,11 @@
                     new TwigFunction("redirecionar", function(string $url){
                         return Helper::redirecionar($url);
                     })
+                ),
+                $this->twig->addFunction(
+                    new TwigFunction("formatarMonetario", function(float $valor){
+                        return Helper::formatarMonetario($valor);
+                    })
                 )
             );
         }

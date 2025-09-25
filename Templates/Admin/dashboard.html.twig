@@ -29,7 +29,7 @@
                 <tr>
                     <td>{{ produto.nome }}</td>
                     <td>{{ produto.quantidade }}</td>
-                    <td>R$ {{ (produto.preco/100)|number_format(2, ',', '.') }}</td>
+                    <td>R$ {{ formatarMonetario(produto.preco/100) }}</td>
                     <td class="acoes">
                         <a href="{{ url('/admin/editar/' ~ produto.id) }}" class="btn-edit"><i class="bi bi-pencil"></i> Editar</a>
                         <a href="{{ url('/admin/confirmar_deletar/' ~ produto.id) }}" class="btn-delete"><i class="bi bi-trash"></i> Excluir</a>

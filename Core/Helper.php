@@ -80,10 +80,10 @@
         /**
          * Formata um número para formato monetário em reais
          *
-         * @param float|null $valor número a ser formatado
+         * @param float $valor número a ser formatado
          * @return string número formatado em duas casas decimais antecedido de 'R$'
          */
-        public static function formatarMonetario(float $valor = null): string{
+        public static function formatarMonetario(float $valor): string{
             return "R$ ".self::formatarValor($valor);
         }
 
