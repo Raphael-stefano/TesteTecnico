@@ -54,7 +54,7 @@ Ao clicar em excluir um produto, o usuário é redirecionado a uma página de co
 
 ![Diagrama do Banco de Dados](https://raw.githubusercontent.com/Raphael-stefano/teste_tecnico/main/Banco%20de%20Dados/diagrama.png)
 
-O banco de dados foi desenvolvido utilizando o MySQL (distribuiçao 10.4.27-MariaDB, que vem junto com o Xampp).
+O banco de dados foi desenvolvido utilizando MariaDB (distribuição 10.4.27, compatível com MySQL), que vem junto com o XAMPP.
 
 No banco de dados do projeto, foram criadas tabelas para usuário, produto e categoria. Categoria foi desenvolvida apenas para ser usada no formulário do produto. Usuário foi desenvolvido para a validaçao na tela de login. Produto foi mais desenvolvido, pois foi o que mais foi pedido nos requisitos do projeto.
 
