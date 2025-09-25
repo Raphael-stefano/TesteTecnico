@@ -10,7 +10,7 @@
 - [Testes Unitários](#testes-unitários)
 - [Tecnologias e Versões (para compatibilidade)](#tecnologias-e-versões)
 
-# teste_tecnico
+# TesteTecnico
 
 Esta aplicaçao foi desenvolvida utilizando PhP (8.2.0, composer 2.8.2) com pecee/simplerouter e twig template. A aplicaçao é rodada localmente utilizando o Xampp
 
@@ -79,3 +79,13 @@ php vendor/bin/phpunit
 - PHP: 8.2.0 (via Xampp)
 - Banco de Dados: MariaDB 10.4.27 (compatível com MySQL, também via Xampp)
 - Servidor Web: Apache (via Xampp)
+
+# Configuração inicial
+
+⚠️ Para que a aplicação funcione corretamente, é necessário ajustar o nome da pasta do projeto em três locais:
+
+1. No arquivo **Sistema/configuracao.php**, altere a constante `LINK_LOCAL` para o nome da pasta onde a aplicação está.
+2. No arquivo **rotas.php**, ajuste o **prefixo dos grupos de rotas** para o mesmo nome da pasta.
+3. No arquivo **.htaccess**, atualize a diretiva `RewriteBase` para o nome da pasta.
+
+Exemplo: se sua aplicação está em uma pasta chamada `TesteTecnico`, as configurações devem apontar para `/TesteTecnico/`.
