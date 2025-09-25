@@ -813,7 +813,7 @@ header .header-right div:first-of-type{
 @media (max-width: 767px) {
     /* Cadastro */
     .form-produto {
-        width: 90%;
+        width: 85%;
         height: 60%;
         padding: 15px;
         border-radius: 15px;
@@ -874,7 +874,7 @@ header .header-right div:first-of-type{
 
     /* Exclusão */
     .confirmar-deletar-body .confirmacao {
-        width: 95%;
+        width: 85%;
         height: auto;
         padding: 15px;
         border-radius: 15px;

@@ -7,10 +7,13 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Twig\\' => array($vendorDir . '/twig/twig/src'),
+    'Testes\\' => array($baseDir . '/Testes'),
     'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
     'Symfony\\Polyfill\\Ctype\\' => array($vendorDir . '/symfony/polyfill-ctype'),
     'Sistema\\' => array($baseDir . '/Sistema'),
     'Rapha\\TesteTecnico\\' => array($baseDir . '/src'),
+    'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
     'Pecee\\' => array($vendorDir . '/pecee/simple-router/src/Pecee'),
+    'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
     'Core\\' => array($baseDir . '/Core'),
 );

@@ -6,7 +6,8 @@
         "psr-4": {
             "Rapha\\TesteTecnico\\": "src/",
             "Core\\": "Core/",
-            "Sistema\\": "Sistema/"
+            "Sistema\\": "Sistema/",
+            "Testes\\": "Testes/"
         }
     },
     "authors": [
@@ -18,5 +19,8 @@
     "require": {
         "twig/twig": "^3.21",
         "pecee/simple-router": "^5.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
     }
 }

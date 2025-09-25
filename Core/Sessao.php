@@ -55,6 +55,9 @@
          * @return void
          */
         public static function criar(string $chave, mixed $valor): void{
+            if (!session_id()) {
+                session_start();
+            }
             $_SESSION[$chave] = is_array($valor) ? (object) $valor : $valor;
         }
 

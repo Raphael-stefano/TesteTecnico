@@ -99,6 +99,15 @@
         }
 
         /**
+         * retorna a classe css da mensagem
+         *
+         * @return string
+         */
+        public function getCss(): string{
+            return $this->css;
+        }
+
+        /**
          * seta a si mesmo como flash na sessao
          *
          * @return void

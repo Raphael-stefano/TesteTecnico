@@ -13,6 +13,17 @@
     class Conexao{
         private static PDO $instance;
 
+
+        /**
+         * Usado nos testes unitários para fazer os testes usando banco em memória
+         *
+         * @param PDO $pdo
+         * @return void
+         */
+        public static function setInstance(PDO $pdo): void {
+            self::$instance = $pdo;
+        }
+
         /**
          * configuraçao do banco de dados
          *
