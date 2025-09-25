@@ -1,6 +1,18 @@
+## Sumário
+- [Descrição básica do Projeto](#teste_tecnico)
+- [Tela de Login](#tela-de-login)
+- [Níveis de Usuário](#níveis-de-usuário)
+- [Tabela Dashboard](#tabela-dashboard)
+- [Formulário de Cadastro de Produto](#formulário-de-cadastro-de-produto)
+- [Formulário de Edição de Produto](#formulário-de-edição-de-produto)
+- [Confirmação de Exclusão de Produto](#confirmação-de-exclusão)
+- [Banco de Dados](#banco-de-dados)
+- [Testes Unitários](#testes-unitários)
+- [Tecnologias e Versões (para compatibilidade)](#tecnologias-e-versões)
+
 # teste_tecnico
 
-Esta aplicaçao foi desenvolvida utilizando PhP (8.2.0, composer 2.8.2) com pecee/simplerouter e twig template.
+Esta aplicaçao foi desenvolvida utilizando PhP (8.2.0, composer 2.8.2) com pecee/simplerouter e twig template. A aplicaçao é rodada localmente utilizando o Xampp
 
 # Tela de login
 
@@ -42,7 +54,7 @@ Ao clicar em excluir um produto, o usuário é redirecionado a uma página de co
 
 ![Diagrama do Banco de Dados](https://raw.githubusercontent.com/Raphael-stefano/teste_tecnico/main/Banco%20de%20Dados/diagrama.png)
 
-O banco de dados foi desenvolvido utilizando o MySQL.
+O banco de dados foi desenvolvido utilizando o MySQL (distribuiçao 10.4.27-MariaDB, que vem junto com o Xampp).
 
 No banco de dados do projeto, foram criadas tabelas para usuário, produto e categoria. Categoria foi desenvolvida apenas para ser usada no formulário do produto. Usuário foi desenvolvido para a validaçao na tela de login. Produto foi mais desenvolvido, pois foi o que mais foi pedido nos requisitos do projeto.
 
@@ -51,10 +63,20 @@ O atributo usado para a validaçao foi o E-mail do usuário. As senhas estao dev
 # Testes unitários
 
 Este projeto utiliza PHPUnit para testes unitários. 
-Os testes incluem:
-- CRUD de produtos
-- Leitura de dados de Categorias e Usuários
-- Helpers
-- Objeto Sessao e Objeto Mensagem
+Os testes cobrem:
+- CRUD completo de Produtos
+- Leitura condicional e específica de Categorias e Usuários
+- Validação de helpers utilitários
+- Funcionamento dos objetos Sessão e Mensagem
 
-Para executar os testes unitários, digitar no terminal: php vendor/bin/phpunit
+```markdown
+Para executar os testes:
+```bash
+php vendor/bin/phpunit
+```
+
+# Tecnologias e versoes (para compatibilidade)
+
+- PHP: 8.2.0 (via Xampp)
+- Banco de Dados: MariaDB 10.4.27 (compatível com MySQL, também via Xampp)
+- Servidor Web: Apache (via Xampp)
